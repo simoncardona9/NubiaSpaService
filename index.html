@@ -93,6 +93,15 @@
           >
             ES | EN
           </button>
+          <button
+            class="sound-toggle"
+            type="button"
+            data-sound-toggle
+            aria-pressed="false"
+          >
+            <span aria-hidden="true">♫</span>
+            <span data-es>Sonido</span><span data-en>Sound</span>
+          </button>
           <a
             class="btn"
             href="https://wa.me/18625961338"
@@ -109,6 +118,12 @@
         </div>
       </div>
     </nav>
+    <audio data-ambient-audio autoplay loop preload="metadata">
+      <source
+        src="Master%20Minded%20-%20Amazonian%20Grounding.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
 
     <header class="hero">
       <div class="container hero-grid">

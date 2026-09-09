@@ -99,6 +99,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
+  const ambientAudio = document.querySelector("[data-ambient-audio]");
+  const soundToggle = document.querySelector("[data-sound-toggle]");
+
+  if (ambientAudio && soundToggle) {
+    const setSoundState = (isPlaying) => {
+      soundToggle.setAttribute("aria-pressed", String(isPlaying));
+      soundToggle.classList.toggle("is-playing", isPlaying);
+    };
+
+    soundToggle.addEventListener("click", async () => {
+      if (ambientAudio.paused) {
+        try {
+          await ambientAudio.play();
+        } catch (error) {
+          console.warn("Ambient audio could not start:", error);
+        }
+      } else {
+        ambientAudio.pause();
+      }
+    });
+
+    ambientAudio.addEventListener("play", () => setSoundState(true));
+    ambientAudio.addEventListener("pause", () => setSoundState(false));
+  }
+
   const form = document.querySelector('form[name="contacto-nubia"]');
   if (!form) return;
 
