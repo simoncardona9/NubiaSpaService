@@ -447,11 +447,11 @@ body:not(.en) button[data-es] {
     flex: 0 0 100%;
     flex-direction: column;
     align-items: stretch;
-    gap: 0.5rem;
+    gap: 0.2rem;
     max-height: 70vh;
     max-height: 70dvh;
     overflow-y: auto;
-    padding: 0.25rem 0.5rem 0.75rem;
+    padding: 0 0.25rem 0.4rem;
   }
   .nav-enhanced:not(.nav-open) .nav-links {
     display: none;
@@ -460,8 +460,14 @@ body:not(.en) button[data-es] {
   .dropdown-toggle,
   .nav-links .lang,
   .nav-links .sound-toggle {
-    min-height: 44px;
+    min-height: 40px;
     align-items: center;
+  }
+  .dropdown-menu {
+    padding: 0.25rem;
+  }
+  .dropdown-menu a {
+    padding: 0.5rem 0.7rem;
   }
   .dropdown-menu {
     position: static;
