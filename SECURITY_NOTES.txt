@@ -1,0 +1,80 @@
+NUBIA SPA SERVICE - V7 SECURITY NOTES
+
+Included:
+- Netlify Forms integration
+- Honeypot anti-spam field hidden accessibly (not display:none)
+- Client-side field length and phone validation
+- Security headers:
+  - Content-Security-Policy
+  - X-Frame-Options
+  - X-Content-Type-Options
+  - Referrer-Policy
+  - Permissions-Policy
+  - Cross-Origin-Opener-Policy
+  - Cross-Origin-Resource-Policy
+- No credentials, API keys, or destination email are embedded in HTML
+- Static assets cache headers
+- Form submissions still need email notification configured in Netlify dashboard
+
+Recommended after deploy:
+1. In Netlify, confirm the form "contacto-nubia" is detected.
+2. Configure form submission notifications to nubiaspaservice@gmail.com.
+3. If spam becomes a problem, enable an additional challenge/CAPTCHA layer supported by your Netlify plan or integrate a server-side anti-bot provider.
+4. Replace externally hosted images with locally hosted licensed images before production for tighter CSP and reliability.
+
+
+V8 ROUTING UPDATE
+- Clean URLs are now native:
+  /servicios/
+  /gracias/
+- All internal navigation uses root-absolute URLs.
+- Legacy /servicios.html and /gracias.html redirect permanently to clean routes.
+- Form success action now posts to /gracias/.
+- Assets are referenced from /assets/... so navigation works from nested routes.
+
+
+V9 LOCAL + NETLIFY COMPATIBILITY
+- CSS and JS use relative paths so index.html can be opened directly from a PC.
+- Nested pages use ../assets/... and ../index.html... so they also work with file://.
+- Netlify still serves /servicios/ and /gracias/ as clean public URLs.
+- Legacy .html routes redirect to clean URLs.
+- The contact form action uses gracias/ so it resolves both locally for inspection and on Netlify after submission.
+
+
+V10 FIXES
+- Language switch no longer uses an inline onclick handler, so it is compatible with the site's CSP on Netlify.
+- Language switching is handled exclusively by /assets/site.js and persists through localStorage.
+- Netlify form success action now targets /gracias (no trailing slash).
+- Removed forced /gracias -> /gracias/ redirect to avoid the routing issue seen after form submission.
+- When opened with file:// on a PC, submitting the form is simulated and opens gracias/index.html locally.
+- On Netlify, the form remains a real Netlify Forms submission.
+
+
+V11 HYBRID ROUTING FIX
+- Local file:// links now explicitly target servicios/index.html#section.
+- This prevents Windows from showing a directory listing for servicios/.
+- When served over HTTP/HTTPS (including Netlify), JavaScript rewrites those links to clean URLs such as /servicios/#faciales.
+- Local navigation and Netlify clean navigation now use the same HTML build.
+
+
+V12 PHONE INPUT FIX
+- Phone field changed from type=tel to type=text with inputmode=tel.
+- Browser telephone autofill disabled for this field to avoid caret/cursor jumps.
+- Added an HTML pattern that still permits digits, spaces, +, parentheses, periods and hyphens.
+- Removed per-keystroke custom-validity changes on the phone input.
+
+
+V13 THANK-YOU ROUTE FIX
+- Contact form now submits to /gracias/ with a trailing slash.
+- Removed any rule that could canonicalize /gracias/ back to /gracias.
+- Legacy /gracias.html redirects to /gracias/.
+- Local file preview still uses gracias/index.html through site.js.
+
+
+V14 AJAX FORM FIX
+- Form submission is sent by AJAX to / using URL-encoded data, following Netlify Forms guidance.
+- The hidden form-name field remains present for Netlify detection.
+- Only after a successful POST does the browser navigate with a normal GET to /gracias/.
+- This avoids the POST-to-/gracias/ 404 seen in the deployed site.
+- A bilingual 'Sending… / Enviando…' state and error fallback were added.
+- Local file:// preview still redirects to gracias/index.html without attempting a Netlify submission.
