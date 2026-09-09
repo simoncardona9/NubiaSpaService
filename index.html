@@ -1,77 +1,505 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Nubia Spa Service</title><link rel="stylesheet" href="assets/style.css"></head><body>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nubia Spa Service</title>
+    <link rel="stylesheet" href="assets/style.css?v=2" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav-inner">
+        <a class="brand" href="index.html" data-clean-href="/"
+          >NUBIA SPA SERVICE</a
+        >
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          hidden
+        >
+          <span data-es>Menú</span>
+          <span data-en>Menu</span>
+        </button>
+        <div class="nav-links" id="site-navigation">
+          <a class="nav-link" href="index.html" data-clean-href="/" data-es
+            >Inicio</a
+          ><a class="nav-link" href="index.html" data-clean-href="/" data-en
+            >Home</a
+          >
+          <details class="dropdown">
+            <summary class="dropdown-toggle">
+              <span data-es>Servicios</span>
+              <span data-en>Services</span>
+              <span aria-hidden="true">▾</span>
+            </summary>
+            <div class="dropdown-menu">
+              <a
+                href="servicios/index.html#faciales"
+                data-clean-href="/servicios/#faciales"
+                data-es
+                >Faciales y cuidado de la piel</a
+              ><a
+                href="servicios/index.html#faciales"
+                data-clean-href="/servicios/#faciales"
+                data-en
+                >Facials & Skincare</a
+              >
+              <a
+                href="servicios/index.html#tecnologia"
+                data-clean-href="/servicios/#tecnologia"
+                data-es
+                >Tecnología estética</a
+              ><a
+                href="servicios/index.html#tecnologia"
+                data-clean-href="/servicios/#tecnologia"
+                data-en
+                >Advanced Aesthetic Treatments</a
+              >
+              <a
+                href="servicios/index.html#masajes"
+                data-clean-href="/servicios/#masajes"
+                data-es
+                >Masajes y cuidado corporal</a
+              ><a
+                href="servicios/index.html#masajes"
+                data-clean-href="/servicios/#masajes"
+                data-en
+                >Massage & Body Care</a
+              >
+              <a
+                href="servicios/index.html#sugaring"
+                data-clean-href="/servicios/#sugaring"
+                data-es
+                >Depilación con azúcar</a
+              ><a
+                href="servicios/index.html#sugaring"
+                data-clean-href="/servicios/#sugaring"
+                data-en
+                >Sugaring</a
+              >
+            </div>
+          </details>
+          <a class="nav-link" href="#about" data-es>Sobre Nubia</a
+          ><a class="nav-link" href="#about" data-en>About Nubia</a>
+          <a class="nav-link" href="#contact" data-es>Contacto</a
+          ><a class="nav-link" href="#contact" data-en>Contact</a>
+          <button
+            class="lang"
+            type="button"
+            data-lang-toggle
+            aria-label="Cambiar idioma / Change language"
+          >
+            ES | EN
+          </button>
+          <a
+            class="btn"
+            href="https://wa.me/18625961338"
+            target="_blank"
+            data-es
+            >Contactar a Nubia</a
+          ><a
+            class="btn"
+            href="https://wa.me/18625961338"
+            target="_blank"
+            data-en
+            >Contact Nubia</a
+          >
+        </div>
+      </div>
+    </nav>
 
-<nav class="nav"><div class="container nav-inner">
-<a class="brand" href="index.html" data-clean-href="/">NUBIA SPA SERVICE</a>
-<div class="nav-links">
-<a class="nav-link" href="index.html" data-clean-href="/" data-es>Inicio</a><a class="nav-link" href="index.html" data-clean-href="/" data-en>Home</a>
-<div class="dropdown">
-<button class="dropdown-toggle" data-es>Servicios ▾</button><button class="dropdown-toggle" data-en>Services ▾</button>
-<div class="dropdown-menu">
-<a href="servicios/index.html#faciales" data-clean-href="/servicios/#faciales" data-es>Faciales y cuidado de la piel</a><a href="servicios/index.html#faciales" data-clean-href="/servicios/#faciales" data-en>Facials & Skincare</a>
-<a href="servicios/index.html#tecnologia" data-clean-href="/servicios/#tecnologia" data-es>Tecnología estética</a><a href="servicios/index.html#tecnologia" data-clean-href="/servicios/#tecnologia" data-en>Advanced Aesthetic Treatments</a>
-<a href="servicios/index.html#masajes" data-clean-href="/servicios/#masajes" data-es>Masajes y cuidado corporal</a><a href="servicios/index.html#masajes" data-clean-href="/servicios/#masajes" data-en>Massage & Body Care</a>
-<a href="servicios/index.html#sugaring" data-clean-href="/servicios/#sugaring" data-es>Depilación con azúcar</a><a href="servicios/index.html#sugaring" data-clean-href="/servicios/#sugaring" data-en>Sugaring</a>
-</div></div>
-<a class="nav-link" href="#about" data-es>Sobre Nubia</a><a class="nav-link" href="#about" data-en>About Nubia</a>
-<a class="nav-link" href="#contact" data-es>Contacto</a><a class="nav-link" href="#contact" data-en>Contact</a>
-<button class="lang" type="button" data-lang-toggle aria-label="Cambiar idioma / Change language">ES | EN</button>
-<a class="btn" href="https://wa.me/18625961338" target="_blank" data-es>Contactar a Nubia</a><a class="btn" href="https://wa.me/18625961338" target="_blank" data-en>Contact Nubia</a>
-</div></div></nav>
+    <header class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">Clifton, New Jersey & surrounding areas</div>
+          <h1 data-es>Bienestar, belleza y cuidado para ti</h1>
+          <h1 data-en>Wellness, beauty & care for you</h1>
+          <p class="lead" data-es>
+            Más de 20 años de experiencia profesional ofreciendo cuidado
+            personalizado en Estados Unidos. Un espacio donde cada tratamiento
+            comienza escuchándote.
+          </p>
+          <p class="lead" data-en>
+            Over 20 years of professional experience providing personalized care
+            in the United States. A space where every treatment begins by
+            listening to you.
+          </p>
+          <div class="hero-actions">
+            <a
+              class="btn"
+              href="https://wa.me/18625961338"
+              target="_blank"
+              data-es
+              >Contactar por WhatsApp</a
+            ><a
+              class="btn"
+              href="https://wa.me/18625961338"
+              target="_blank"
+              data-en
+              >Contact on WhatsApp</a
+            ><a
+              class="btn secondary"
+              href="servicios/index.html"
+              data-clean-href="/servicios/"
+              data-es
+              >Ver servicios</a
+            ><a
+              class="btn secondary"
+              href="servicios/index.html"
+              data-clean-href="/servicios/"
+              data-en
+              >Explore services</a
+            >
+          </div>
+        </div>
+        <div class="hero-photo"></div>
+      </div>
+    </header>
+    <div class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item">
+          <span data-es>20+ años de experiencia</span
+          ><span data-en>20+ Years of Experience</span>
+        </div>
+        <div class="trust-item">
+          <span data-es>Profesional capacitada y licenciada</span
+          ><span data-en>Trained & Licensed Professional</span>
+        </div>
+        <div class="trust-item">
+          <span data-es>Atención personalizada</span
+          ><span data-en>Personalized Care</span>
+        </div>
+        <div class="trust-item">
+          <span data-es>Servicio profesional en New Jersey</span
+          ><span data-en>Professional Service in New Jersey</span>
+        </div>
+      </div>
+    </div>
 
-<header class="hero"><div class="container hero-grid"><div><div class="eyebrow">Clifton, New Jersey & surrounding areas</div>
-<h1 data-es>Bienestar, belleza y cuidado para ti</h1><h1 data-en>Wellness, beauty & care for you</h1>
-<p class="lead" data-es>Más de 20 años de experiencia profesional ofreciendo cuidado personalizado en Estados Unidos. Un espacio donde cada tratamiento comienza escuchándote.</p>
-<p class="lead" data-en>Over 20 years of professional experience providing personalized care in the United States. A space where every treatment begins by listening to you.</p>
-<div class="hero-actions"><a class="btn" href="https://wa.me/18625961338" target="_blank" data-es>Contactar por WhatsApp</a><a class="btn" href="https://wa.me/18625961338" target="_blank" data-en>Contact on WhatsApp</a><a class="btn secondary" href="servicios/index.html" data-clean-href="/servicios/" data-es>Ver servicios</a><a class="btn secondary" href="servicios/index.html" data-clean-href="/servicios/" data-en>Explore services</a></div></div><div class="hero-photo"></div></div></header>
-<div class="trust"><div class="container trust-grid"><div class="trust-item"><span data-es>20+ años de experiencia</span><span data-en>20+ Years of Experience</span></div><div class="trust-item"><span data-es>Profesional capacitada y licenciada</span><span data-en>Trained & Licensed Professional</span></div><div class="trust-item"><span data-es>Atención personalizada</span><span data-en>Personalized Care</span></div><div class="trust-item"><span data-es>Servicio profesional en New Jersey</span><span data-en>Professional Service in New Jersey</span></div></div></div>
+    <section>
+      <div class="container intro-grid">
+        <div>
+          <div class="eyebrow" data-es>Un espacio dedicado a ti</div>
+          <div class="eyebrow" data-en>A space dedicated to you</div>
+          <h2 data-es>No se trata solo de elegir un tratamiento.</h2>
+          <h2 data-en>It’s not only about choosing a treatment.</h2>
+        </div>
+        <div class="soft-card">
+          <p data-es>
+            Con más de 20 años de experiencia profesional en Estados Unidos,
+            Nubia se toma el tiempo de conocer tus necesidades y objetivos antes
+            de orientarte sobre las opciones disponibles.
+          </p>
+          <p data-en>
+            With over 20 years of professional experience in the United States,
+            Nubia takes the time to understand your needs and goals before
+            guiding you through the available options.
+          </p>
+          <p data-es>
+            Faciales, tecnología estética, masajes, cuidado corporal y
+            depilación con azúcar se ofrecen con una atención cercana,
+            profesional y personalizada.
+          </p>
+          <p data-en>
+            Facials, advanced aesthetics, massage, body care and sugaring are
+            provided with warm, professional and personalized attention.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<section><div class="container intro-grid"><div><div class="eyebrow" data-es>Un espacio dedicado a ti</div><div class="eyebrow" data-en>A space dedicated to you</div><h2 data-es>No se trata solo de elegir un tratamiento.</h2><h2 data-en>It’s not only about choosing a treatment.</h2></div>
-<div class="soft-card"><p data-es>Con más de 20 años de experiencia profesional en Estados Unidos, Nubia se toma el tiempo de conocer tus necesidades y objetivos antes de orientarte sobre las opciones disponibles.</p><p data-en>With over 20 years of professional experience in the United States, Nubia takes the time to understand your needs and goals before guiding you through the available options.</p><p data-es>Faciales, tecnología estética, masajes, cuidado corporal y depilación con azúcar se ofrecen con una atención cercana, profesional y personalizada.</p><p data-en>Facials, advanced aesthetics, massage, body care and sugaring are provided with warm, professional and personalized attention.</p></div></div></section>
+    <section class="services-preview">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow" data-es>Servicios</div>
+          <div class="eyebrow" data-en>Services</div>
+          <h2 data-es>Encuentra el cuidado adecuado para ti</h2>
+          <h2 data-en>Find the right care for you</h2>
+          <p data-es>
+            En la página de servicios puedes conocer cada tratamiento con más
+            detalle.
+          </p>
+          <p data-en>
+            Explore the services page to learn more about each treatment.
+          </p>
+        </div>
+        <div class="preview-grid">
+          <a
+            class="service-preview"
+            href="servicios/index.html#faciales"
+            data-clean-href="/servicios/#faciales"
+            ><div
+              class="preview-img"
+              style="
+                background-image: url(&quot;https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85&quot;);
+              "
+            ></div>
+            <div class="preview-copy">
+              <h3 data-es>Faciales y cuidado de la piel</h3>
+              <h3 data-en>Facials & Skincare</h3>
+              <p data-es>
+                Limpieza profunda, antiedad, facial de oro y cuidado
+                personalizado.
+              </p>
+              <p data-en>
+                Deep cleansing, anti-aging, gold facial and personalized
+                skincare.
+              </p>
+              <span class="small-link" data-es>Ver faciales →</span
+              ><span class="small-link" data-en>View facials →</span>
+            </div></a
+          >
+          <a
+            class="service-preview"
+            href="servicios/index.html#tecnologia"
+            data-clean-href="/servicios/#tecnologia"
+            ><div
+              class="preview-img"
+              style="
+                background-image: url(&quot;https://primary.jwwb.nl/public/k/m/t/temp-aggehvgbvylgbckzkxcj/whatsapp-image-2025-08-06-at-20-08-05-high-ec481v.jpg?enable=upscale&enable-io=true&fit=bounds&width=1200&quot;);
+              "
+            ></div>
+            <div class="preview-copy">
+              <h3 data-es>Tecnología estética</h3>
+              <h3 data-en>Advanced Aesthetic Treatments</h3>
+              <p data-es>
+                HIFU, IPL, radiofrecuencia, microdermoabrasión y más.
+              </p>
+              <p data-en>
+                HIFU, IPL, radiofrequency, microdermabrasion and more.
+              </p>
+              <span class="small-link" data-es>Ver tecnologías →</span
+              ><span class="small-link" data-en>View treatments →</span>
+            </div></a
+          >
+          <a
+            class="service-preview"
+            href="servicios/index.html#masajes"
+            data-clean-href="/servicios/#masajes"
+            ><div
+              class="preview-img"
+              style="
+                background-image: url(&quot;https://www.pranaendura.com/blog/wp-content/uploads/2023/05/Depositphotos_381258302_XL-scaled.jpg&quot;);
+              "
+            ></div>
+            <div class="preview-copy">
+              <h3 data-es>Masajes y cuidado corporal</h3>
+              <h3 data-en>Massage & Body Care</h3>
+              <p data-es>
+                Relajación, piedras calientes, cuidado posoperatorio y
+                tratamientos corporales.
+              </p>
+              <p data-en>
+                Relaxation, hot stones, post-operative care and body treatments.
+              </p>
+              <span class="small-link" data-es>Ver masajes →</span
+              ><span class="small-link" data-en
+                >View massage & body care →</span
+              >
+            </div></a
+          >
+          <a
+            class="service-preview"
+            href="servicios/index.html#sugaring"
+            data-clean-href="/servicios/#sugaring"
+            ><div
+              class="preview-img"
+              style="
+                background-image: url(&quot;https://images.squarespace-cdn.com/content/v1/66e0efcc0e24cd3207ba8e0b/38f7c702-35cf-4567-9ea4-7f7e2170521c/Stills.00_05_28_13.Still001.jpg&quot;);
+              "
+            ></div>
+            <div class="preview-copy">
+              <h3 data-es>Depilación con azúcar</h3>
+              <h3 data-en>Sugaring</h3>
+              <p data-es>
+                Una alternativa de depilación a base de azúcar para una piel
+                suave y cuidada.
+              </p>
+              <p data-en>
+                A sugar-based hair removal option for smooth, beautifully
+                cared-for skin.
+              </p>
+              <span class="small-link" data-es>Conocer más →</span
+              ><span class="small-link" data-en>Learn more →</span>
+            </div></a
+          >
+        </div>
+      </div>
+    </section>
 
-<section class="services-preview"><div class="container"><div class="section-head"><div class="eyebrow" data-es>Servicios</div><div class="eyebrow" data-en>Services</div><h2 data-es>Encuentra el cuidado adecuado para ti</h2><h2 data-en>Find the right care for you</h2><p data-es>En la página de servicios puedes conocer cada tratamiento con más detalle.</p><p data-en>Explore the services page to learn more about each treatment.</p></div>
-<div class="preview-grid">
-<a class="service-preview" href="servicios/index.html#faciales" data-clean-href="/servicios/#faciales"><div class="preview-img" style="background-image:url('https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=1200&q=85')"></div><div class="preview-copy"><h3 data-es>Faciales y cuidado de la piel</h3><h3 data-en>Facials & Skincare</h3><p data-es>Limpieza profunda, antiedad, facial de oro y cuidado personalizado.</p><p data-en>Deep cleansing, anti-aging, gold facial and personalized skincare.</p><span class="small-link" data-es>Ver faciales →</span><span class="small-link" data-en>View facials →</span></div></a>
-<a class="service-preview" href="servicios/index.html#tecnologia" data-clean-href="/servicios/#tecnologia"><div class="preview-img" style="background-image:url('https://primary.jwwb.nl/public/k/m/t/temp-aggehvgbvylgbckzkxcj/whatsapp-image-2025-08-06-at-20-08-05-high-ec481v.jpg?enable=upscale&enable-io=true&fit=bounds&width=1200')"></div><div class="preview-copy"><h3 data-es>Tecnología estética</h3><h3 data-en>Advanced Aesthetic Treatments</h3><p data-es>HIFU, IPL, radiofrecuencia, microdermoabrasión y más.</p><p data-en>HIFU, IPL, radiofrequency, microdermabrasion and more.</p><span class="small-link" data-es>Ver tecnologías →</span><span class="small-link" data-en>View treatments →</span></div></a>
-<a class="service-preview" href="servicios/index.html#masajes" data-clean-href="/servicios/#masajes"><div class="preview-img" style="background-image:url('https://www.pranaendura.com/blog/wp-content/uploads/2023/05/Depositphotos_381258302_XL-scaled.jpg')"></div><div class="preview-copy"><h3 data-es>Masajes y cuidado corporal</h3><h3 data-en>Massage & Body Care</h3><p data-es>Relajación, piedras calientes, cuidado posoperatorio y tratamientos corporales.</p><p data-en>Relaxation, hot stones, post-operative care and body treatments.</p><span class="small-link" data-es>Ver masajes →</span><span class="small-link" data-en>View massage & body care →</span></div></a>
-<a class="service-preview" href="servicios/index.html#sugaring" data-clean-href="/servicios/#sugaring"><div class="preview-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/66e0efcc0e24cd3207ba8e0b/38f7c702-35cf-4567-9ea4-7f7e2170521c/Stills.00_05_28_13.Still001.jpg')"></div><div class="preview-copy"><h3 data-es>Depilación con azúcar</h3><h3 data-en>Sugaring</h3><p data-es>Una alternativa de depilación a base de azúcar para una piel suave y cuidada.</p><p data-en>A sugar-based hair removal option for smooth, beautifully cared-for skin.</p><span class="small-link" data-es>Conocer más →</span><span class="small-link" data-en>Learn more →</span></div></a>
-</div></div></section>
+    <section id="about">
+      <div class="container about-grid">
+        <div class="about-photo"></div>
+        <div>
+          <div class="eyebrow" data-es>Conoce a Nubia</div>
+          <div class="eyebrow" data-en>Meet Nubia</div>
+          <h2 data-es>Experiencia, profesionalismo y atención personalizada</h2>
+          <h2 data-en>Experience, professionalism & personalized care</h2>
+          <p data-es>
+            Con más de 20 años de experiencia profesional trabajando en Estados
+            Unidos, Nubia ha dedicado su carrera al cuidado personal, la
+            estética y el bienestar de sus clientes.
+          </p>
+          <p data-en>
+            With over 20 years of professional experience working in the United
+            States, Nubia has dedicated her career to personal care, aesthetics
+            and her clients’ wellbeing.
+          </p>
+          <p data-es>
+            Es una profesional capacitada y cuenta con las licencias
+            correspondientes para brindar sus servicios profesionalmente en
+            Estados Unidos.
+          </p>
+          <p data-en>
+            She is a trained professional and holds the appropriate professional
+            licenses to provide her services in the United States.
+          </p>
+        </div>
+      </div>
+    </section>
 
-<section id="about"><div class="container about-grid"><div class="about-photo"></div><div><div class="eyebrow" data-es>Conoce a Nubia</div><div class="eyebrow" data-en>Meet Nubia</div><h2 data-es>Experiencia, profesionalismo y atención personalizada</h2><h2 data-en>Experience, professionalism & personalized care</h2><p data-es>Con más de 20 años de experiencia profesional trabajando en Estados Unidos, Nubia ha dedicado su carrera al cuidado personal, la estética y el bienestar de sus clientes.</p><p data-en>With over 20 years of professional experience working in the United States, Nubia has dedicated her career to personal care, aesthetics and her clients’ wellbeing.</p><p data-es>Es una profesional capacitada y cuenta con las licencias correspondientes para brindar sus servicios profesionalmente en Estados Unidos.</p><p data-en>She is a trained professional and holds the appropriate professional licenses to provide her services in the United States.</p></div></div></section>
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <div class="eyebrow" style="color: #ccb9aa" data-es>Contacto</div>
+          <div class="eyebrow" style="color: #ccb9aa" data-en>Contact</div>
+          <h2 data-es>¿No sabes qué tratamiento elegir?</h2>
+          <h2 data-en>Not sure which treatment to choose?</h2>
+          <p data-es>
+            Cuéntale a Nubia qué estás buscando. Ella podrá orientarte sobre las
+            opciones disponibles, precios y disponibilidad.
+          </p>
+          <p data-en>
+            Tell Nubia what you're looking for. She can guide you through the
+            available options, pricing and availability.
+          </p>
+          <p>
+            <strong>NUBIA SPA SERVICE</strong><br />Clifton, New Jersey &
+            surrounding areas<br />862-596-1338
+          </p>
+        </div>
+        <div class="soft-card" style="color: #3c2b25">
+          <form
+            name="contacto-nubia"
+            method="POST"
+            action="/"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+          >
+            <input type="hidden" name="form-name" value="contacto-nubia" />
+            <p class="hp-field" aria-hidden="true">
+              <label
+                >No completar:
+                <input name="bot-field" tabindex="-1" autocomplete="off"
+              /></label>
+            </p>
 
-<section class="contact" id="contact"><div class="container contact-grid"><div><div class="eyebrow" style="color:#ccb9aa" data-es>Contacto</div><div class="eyebrow" style="color:#ccb9aa" data-en>Contact</div><h2 data-es>¿No sabes qué tratamiento elegir?</h2><h2 data-en>Not sure which treatment to choose?</h2><p data-es>Cuéntale a Nubia qué estás buscando. Ella podrá orientarte sobre las opciones disponibles, precios y disponibilidad.</p><p data-en>Tell Nubia what you're looking for. She can guide you through the available options, pricing and availability.</p><p><strong>NUBIA SPA SERVICE</strong><br>Clifton, New Jersey & surrounding areas<br>862-596-1338</p></div><div class="soft-card" style="color:#3c2b25"><form name="contacto-nubia" method="POST" action="/" data-netlify="true" netlify-honeypot="bot-field">
-<input type="hidden" name="form-name" value="contacto-nubia">
-<p class="hp-field" aria-hidden="true"><label>No completar: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+            <label for="contact-name">
+              <span data-es>Nombre</span><span data-en>Name</span>
+            </label>
+            <input
+              id="contact-name"
+              name="name"
+              type="text"
+              placeholder="Nombre / Name"
+              autocomplete="name"
+              minlength="2"
+              maxlength="80"
+              required
+            />
 
-<label data-es>Nombre</label><label data-en>Name</label>
-<input name="name" type="text" placeholder="Nombre / Name" autocomplete="name" minlength="2" maxlength="80" required>
+            <label for="contact-phone">
+              <span data-es>Teléfono</span><span data-en>Phone</span>
+            </label>
+            <input
+              id="contact-phone"
+              name="phone"
+              type="text"
+              placeholder="Teléfono / Phone"
+              autocomplete="off"
+              inputmode="tel"
+              spellcheck="false"
+              minlength="7"
+              maxlength="25"
+              pattern="[0-9+\(\).\- ]{7,25}"
+              required
+            />
 
-<label data-es>Teléfono</label><label data-en>Phone</label>
-<input name="phone" type="text" placeholder="Teléfono / Phone" autocomplete="off" inputmode="tel" spellcheck="false" minlength="7" maxlength="25" pattern="[0-9+().\- ]{7,25}" required>
+            <label for="contact-email">Email</label>
+            <input
+              id="contact-email"
+              name="email"
+              type="email"
+              placeholder="Email"
+              autocomplete="email"
+              maxlength="120"
+              required
+            />
 
-<label>Email</label>
-<input name="email" type="email" placeholder="Email" autocomplete="email" maxlength="120" required>
+            <label for="contact-service">
+              <span data-es>Servicio</span><span data-en>Service</span>
+            </label>
+            <select id="contact-service" name="service" required>
+              <option value="">Selecciona / Select</option>
+              <option value="Facial">Facial</option>
+              <option value="HIFU">HIFU</option>
+              <option value="IPL">IPL</option>
+              <option value="Massage">Massage / Masaje</option>
+              <option value="Body Treatment">
+                Body Treatment / Tratamiento corporal
+              </option>
+              <option value="Post-Operative Massage">
+                Post-Operative Massage / Masaje posoperatorio
+              </option>
+              <option value="Sugaring">Sugaring</option>
+              <option value="Not Sure">No estoy seguro / Not sure</option>
+            </select>
 
-<label data-es>Servicio</label><label data-en>Service</label>
-<select name="service" required>
-<option value="">Selecciona / Select</option>
-<option value="Facial">Facial</option>
-<option value="HIFU">HIFU</option>
-<option value="IPL">IPL</option>
-<option value="Massage">Massage / Masaje</option>
-<option value="Body Treatment">Body Treatment / Tratamiento corporal</option>
-<option value="Post-Operative Massage">Post-Operative Massage / Masaje posoperatorio</option>
-<option value="Sugaring">Sugaring</option>
-<option value="Not Sure">No estoy seguro / Not sure</option>
-</select>
+            <label for="contact-message">
+              <span data-es>Mensaje</span><span data-en>Message</span>
+            </label>
+            <textarea
+              id="contact-message"
+              name="message"
+              placeholder="Mensaje / Message"
+              minlength="5"
+              maxlength="2000"
+              required
+            ></textarea>
 
-<label data-es>Mensaje</label><label data-en>Message</label>
-<textarea name="message" placeholder="Mensaje / Message" minlength="5" maxlength="2000" required></textarea>
+            <button class="btn" type="submit" data-es>Enviar consulta</button>
+            <button class="btn" type="submit" data-en>Send inquiry</button>
 
-<button class="btn" type="submit" data-es>Enviar consulta</button>
-<button class="btn" type="submit" data-en>Send inquiry</button>
+            <p class="form-note" data-es>
+              Tu información se usa únicamente para responder a tu consulta.
+            </p>
+            <p class="form-note" data-en>
+              Your information is used only to respond to your inquiry.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
 
-<p class="form-note" data-es>Tu información se usa únicamente para responder a tu consulta.</p>
-<p class="form-note" data-en>Your information is used only to respond to your inquiry.</p>
-</form></div></div></section>
-
-<footer><div class="container footer-grid"><div><strong>NUBIA SPA SERVICE</strong><br>20+ Years of Professional Experience</div><div>Clifton, New Jersey & surrounding areas<br>862-596-1338</div><div>ES | EN</div></div></footer><a class="whatsapp" href="https://wa.me/18625961338" target="_blank" aria-label="WhatsApp">☏</a><script src="assets/site.js"></script></body></html>
+    <footer>
+      <div class="container footer-grid">
+        <div>
+          <strong>NUBIA SPA SERVICE</strong><br />20+ Years of Professional
+          Experience
+        </div>
+        <div>Clifton, New Jersey & surrounding areas<br />862-596-1338</div>
+        <div>ES | EN</div>
+      </div>
+    </footer>
+    <a
+      class="whatsapp"
+      href="https://wa.me/18625961338"
+      target="_blank"
+      aria-label="WhatsApp"
+      >☏</a
+    >
+    <script src="assets/site.js?v=2"></script>
+  </body>
+</html>
