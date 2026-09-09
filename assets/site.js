@@ -27,12 +27,71 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  document.querySelectorAll('.nav-inner').forEach((navInner, index) => {
+    const navLinks = navInner.querySelector('.nav-links');
+    const brand = navInner.querySelector('.brand');
+    if (!navLinks || !brand) return;
+
+    const menuId = `site-menu-${index}`;
+    navLinks.id = menuId;
+
+    const menuToggle = document.createElement('button');
+    menuToggle.className = 'menu-toggle';
+    menuToggle.type = 'button';
+    menuToggle.setAttribute('aria-controls', menuId);
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation menu');
+    menuToggle.innerHTML = '<span></span><span></span><span></span>';
+    brand.insertAdjacentElement('afterend', menuToggle);
+
+    const closeMenu = () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
+
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('is-open');
+      menuToggle.classList.toggle('is-open', isOpen);
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    navLinks.querySelectorAll('a').forEach((link) => link.addEventListener('click', closeMenu));
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape') closeMenu();
+    });
+  });
 
   document.querySelectorAll('[data-lang-toggle]').forEach((button) => {
     button.addEventListener('click', () => {
       applyLang(document.body.classList.contains('en') ? 'es' : 'en');
     });
   });
+
+  const ambientAudio = document.querySelector('[data-ambient-audio]');
+  const soundToggle = document.querySelector('[data-sound-toggle]');
+
+  if (ambientAudio && soundToggle) {
+    const setSoundState = (isPlaying) => {
+      soundToggle.setAttribute('aria-pressed', String(isPlaying));
+      soundToggle.classList.toggle('is-playing', isPlaying);
+    };
+
+    soundToggle.addEventListener('click', async () => {
+      if (ambientAudio.paused) {
+        try {
+          await ambientAudio.play();
+        } catch (error) {
+          console.warn('Ambient audio could not start:', error);
+        }
+      } else {
+        ambientAudio.pause();
+      }
+    });
+
+    ambientAudio.addEventListener('play', () => setSoundState(true));
+    ambientAudio.addEventListener('pause', () => setSoundState(false));
+  }
 
   const form = document.querySelector('form[name="contacto-nubia"]');
   if (!form) return;
