@@ -2,6 +2,12 @@ function applyLang(lang) {
   const safeLang = lang === "en" ? "en" : "es";
   document.body.classList.toggle("en", safeLang === "en");
   document.documentElement.lang = safeLang;
+  document.querySelectorAll("[data-lang-option]").forEach((option) => {
+    option.setAttribute(
+      "aria-current",
+      String(option.dataset.langOption === safeLang),
+    );
+  });
   try {
     localStorage.setItem("nubia-lang", safeLang);
   } catch (e) {}
@@ -13,6 +19,80 @@ function getSavedLang() {
   } catch (e) {
     return "es";
   }
+}
+
+function loadGoogleAnalytics(measurementId) {
+  if (!measurementId || window.gtag) return;
+
+  const script = document.createElement("script");
+  script.async = true;
+  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
+  document.head.appendChild(script);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function gtag() {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", measurementId);
+}
+
+function removeAnalyticsCookies() {
+  const expires = "expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; SameSite=Lax";
+  const domains = ["", `; domain=${location.hostname}`, `; domain=.${location.hostname}`];
+
+  document.cookie.split(";").forEach((cookie) => {
+    const name = cookie.trim().split("=")[0];
+    if (name === "_ga" || name.startsWith("_ga_")) {
+      domains.forEach((domain) => {
+        document.cookie = `${name}=; ${expires}${domain}`;
+      });
+    }
+  });
+}
+
+function setupCookieConsent() {
+  const banner = document.querySelector("[data-cookie-banner]");
+  const measurementId = document.body.dataset.analyticsId;
+  const storageKey = "nubia-analytics-consent";
+  let choice;
+
+  try {
+    choice = localStorage.getItem(storageKey);
+  } catch (error) {}
+
+  if (choice === "accepted") {
+    loadGoogleAnalytics(measurementId);
+  } else if (banner) {
+    banner.hidden = false;
+  }
+
+  document.querySelectorAll("[data-cookie-choice]").forEach((button) => {
+    button.addEventListener("click", () => {
+      const selected = button.dataset.cookieChoice;
+      try {
+        localStorage.setItem(storageKey, selected);
+      } catch (error) {}
+
+      if (selected === "accepted") {
+        loadGoogleAnalytics(measurementId);
+      } else {
+        removeAnalyticsCookies();
+      }
+
+      if (banner) banner.hidden = true;
+    });
+  });
+
+  document.querySelectorAll("[data-cookie-preferences]").forEach((button) => {
+    button.addEventListener("click", () => {
+      try {
+        localStorage.removeItem(storageKey);
+      } catch (error) {}
+      if (banner) banner.hidden = false;
+      banner?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  });
 }
 
 function setupNavigation() {
@@ -80,6 +160,7 @@ function setupNavigation() {
 document.addEventListener("DOMContentLoaded", () => {
   applyLang(getSavedLang());
   setupNavigation();
+  setupCookieConsent();
 
   // Hybrid routing:
   // - file:// keeps explicit index.html paths so Windows opens pages directly.
