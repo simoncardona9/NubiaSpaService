@@ -22,19 +22,27 @@ function getSavedLang() {
 }
 
 function loadGoogleAnalytics(measurementId) {
-  if (!measurementId || window.gtag) return;
+  if (!measurementId || window.nubiaAnalyticsConfigured) return;
 
-  const script = document.createElement("script");
-  script.async = true;
-  script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
-  document.head.appendChild(script);
-
-  window.dataLayer = window.dataLayer || [];
-  window.gtag = function gtag() {
-    window.dataLayer.push(arguments);
-  };
-  window.gtag("js", new Date());
+  window.gtag("consent", "update", {
+    ad_storage: "granted",
+    ad_user_data: "granted",
+    ad_personalization: "granted",
+    analytics_storage: "granted",
+  });
   window.gtag("config", measurementId);
+  window.nubiaAnalyticsConfigured = true;
+}
+
+function denyGoogleConsent() {
+  if (!window.gtag) return;
+
+  window.gtag("consent", "update", {
+    ad_storage: "denied",
+    ad_user_data: "denied",
+    ad_personalization: "denied",
+    analytics_storage: "denied",
+  });
 }
 
 function removeAnalyticsCookies() {
@@ -77,6 +85,7 @@ function setupCookieConsent() {
       if (selected === "accepted") {
         loadGoogleAnalytics(measurementId);
       } else {
+        denyGoogleConsent();
         removeAnalyticsCookies();
       }
 
