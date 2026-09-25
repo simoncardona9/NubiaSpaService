@@ -22,14 +22,18 @@
     />
     <meta property="og:url" content="https://www.nubiaspaservice.com/" />
     <meta name="twitter:card" content="summary" />
+    <link rel="icon" type="image/png" href="assets/images/logo.png" />
     <script src="assets/google-consent.js?v=1"></script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-BNJXZK34B1"></script>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "BeautySalon",
+        "@type": "DaySpa",
+        "@id": "https://www.nubiaspaservice.com/#business",
         "name": "Nubia Spa Service",
         "url": "https://www.nubiaspaservice.com/",
+        "image": "https://www.nubiaspaservice.com/assets/images/logo.png",
+        "description": "Facials, advanced aesthetic treatments, massages, body care, and sugaring in Clifton, New Jersey.",
         "telephone": "+1-862-596-1338",
         "email": "nubiaspaservice@gmail.com",
         "address": {
@@ -37,7 +41,14 @@
           "streetAddress": "762 Van Houten Ave",
           "addressLocality": "Clifton",
           "addressRegion": "NJ",
+          "postalCode": "07013",
           "addressCountry": "US"
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+1-862-596-1338",
+          "contactType": "customer service",
+          "availableLanguage": ["Spanish", "English"]
         },
         "areaServed": [
           { "@type": "City", "name": "Clifton" },
@@ -61,10 +72,10 @@
           "@type": "OfferCatalog",
           "name": "Spa and beauty services",
           "itemListElement": [
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facials and skincare" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Advanced aesthetic treatments" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massage and body care" } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sugaring" } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Facials and skincare", "url": "https://www.nubiaspaservice.com/servicios/#faciales" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Advanced aesthetic treatments", "url": "https://www.nubiaspaservice.com/servicios/#tecnologia" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Massage and body care", "url": "https://www.nubiaspaservice.com/servicios/#masajes" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Sugaring", "url": "https://www.nubiaspaservice.com/servicios/#sugaring" } }
           ]
         }
       }
